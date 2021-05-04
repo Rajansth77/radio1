@@ -24,6 +24,11 @@ import RadioPresentors from "components/homepage/radioPresentors";
 import MostRead from "components/homepage/mostRead";
 
 const abortC = new AbortController();
+const abortC1 = new AbortController();
+const abortC2 = new AbortController();
+const abortC3 = new AbortController();
+const abortC4 = new AbortController();
+const abortC5 = new AbortController();
 
 const Index = ({
   bNewsOne,
@@ -39,6 +44,11 @@ const Index = ({
     }
     return () => {
       abortC.abort();
+      abortC1.abort();
+      abortC2.abort();
+      abortC3.abort();
+      abortC4.abort();
+      abortC5.abort();
     };
   }, []);
   return (
@@ -206,31 +216,31 @@ export const getStaticProps = async () => {
 
     const popular = await fetch(
       "https://www.uniquefm.com.np/api/get-sidebar1-popular-news-data",
-      { signal: abortC.signal }
+      { signal: abortC1.signal }
     );
     const popularData = await popular.json();
 
     const highlight = await fetch(
       "https://www.uniquefm.com.np/api/get-sidebar1-today-highlight-data",
-      { signal: abortC.signal }
+      { signal: abortC2.signal }
     );
     const highlightData = await highlight.json();
 
     const special = await fetch(
       "https://www.uniquefm.com.np/api/get-sidebar1-special-program-data",
-      { signal: abortC.signal }
+      { signal: abortC3.signal }
     );
     const specialData = await special.json();
 
     const latestPodcast = await fetch(
       "https://www.uniquefm.com.np/api/get-sidebar1-latest-podcast-data",
-      { signal: abortC.signal }
+      { signal: abortC4.signal }
     );
     const latestPodcastData = await latestPodcast.json();
 
     const rj = await fetch(
       "https://www.uniquefm.com.np/api/get-sidebar1-radio-presenter-data",
-      { signal: abortC.signal }
+      { signal: abortC5.signal }
     );
     const rjData = await rj.json();
 
