@@ -3,8 +3,10 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import useFetch from "api/useFetch";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
+const abortC1 = new AbortController();
 
 const DetailNews = ({ SingleNews }) => {
   const router = useRouter();
@@ -80,7 +82,7 @@ export const getStaticProps = async (context) => {
   try {
     const SingleNews = await fetch(
       `https://www.uniquefm.com.np/api/get-news-detail/${id}`,
-      { signal: abortC.signal }
+      { signal: abortC1.signal }
     );
     const NewsData = await SingleNews.json();
 

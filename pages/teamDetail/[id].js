@@ -1,8 +1,10 @@
 import TeamDetail from "components/teamDetail/TeamDetail";
 import React from "react";
 import { useRouter } from "next/router";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
+const abortC1 = new AbortController();
 
 const DetailTeam = ({ SingleTeam }) => {
   const router = useRouter();
@@ -35,7 +37,7 @@ export const getStaticProps = async (context) => {
   try {
     const SingleTeam = await fetch(
       `https://www.uniquefm.com.np/api/get-member-detail/${id}`,
-      { signal: abortC.signal }
+      { signal: abortC1.signal }
     );
     const TeamData = await SingleTeam.json();
 

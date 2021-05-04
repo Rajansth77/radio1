@@ -22,6 +22,7 @@ import LatestPodcast from "components/homepage/latestPodcast";
 import CountDown from "components/homepage/countDown";
 import RadioPresentors from "components/homepage/radioPresentors";
 import MostRead from "components/homepage/mostRead";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
 const abortC1 = new AbortController();

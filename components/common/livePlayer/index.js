@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
 import $ from "jquery";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
 

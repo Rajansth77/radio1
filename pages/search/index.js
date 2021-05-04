@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import LatestNews from "components/newsList/LatestNews";
 import Sidebar from "components/common/sidebar/Sidebar";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
 

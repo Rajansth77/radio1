@@ -1,8 +1,10 @@
 import ProgramDetail from "components/programDetail/ProgramDetail";
 import React from "react";
 import { useRouter } from "next/router";
+import AbortController from "abort-controller"
 
 const abortC = new AbortController();
+const abortC1 = new AbortController();
 
 const index = ({ DetailProgram }) => {
   const router = useRouter();
@@ -35,7 +37,7 @@ export const getStaticProps = async (context) => {
   try {
     const schedule = await fetch(
       `https://www.uniquefm.com.np/api/get-program-detail/${id}`,
-      { signal: abortC.signal }
+      { signal: abortC1.signal }
     );
     const scheduleData = await schedule.json();
 

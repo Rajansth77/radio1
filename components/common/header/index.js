@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavDate from "./date";
 import Logo from "../../../public/images/logo.png";
 import { useEffect, useState } from "react";
+import AbortController from "abort-controller"
 
 const Header = () => {
   const [ads, setAds] = useState(null);
