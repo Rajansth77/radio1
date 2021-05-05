@@ -9,14 +9,12 @@ import { useRouter } from "next/router";
 const DetailTeam = ({ SingleTeam }) => {
   const router = useRouter();
 
-  return <TeamDetail content={SingleTeam} />;
+  return <TeamDetail content={SingleTeam && SingleTeam} />;
 };
-
-export default DetailTeam;
 
 export const getStaticPaths = async () => {
   const TeamRes = await fetch(
-    "https://www.uniquefm.com.np/api/get-member-detail/9"
+    "https://www.uniquefm.com.np/api/get-member-detail/12"
     // ,{ signal: abortC.signal }
   );
   const dataTeam = await TeamRes.json();
@@ -50,3 +48,5 @@ export const getStaticProps = async (context) => {
     console.warn(error);
   }
 };
+
+export default DetailTeam;

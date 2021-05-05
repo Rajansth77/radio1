@@ -210,38 +210,38 @@ const Index = ({
 export const getStaticProps = async () => {
   try {
     const latest = await fetch(
-      "https://www.uniquefm.com.np/api/get-latest-news-data",
-      { signal: abortC.signal }
+      "https://www.uniquefm.com.np/api/get-latest-news-data"
+      // ,{ signal: abortC.signal }
     );
     const latestData = await latest.json();
 
     const popular = await fetch(
-      "https://www.uniquefm.com.np/api/get-sidebar1-popular-news-data",
-      { signal: abortC1.signal }
+      "https://www.uniquefm.com.np/api/get-sidebar1-popular-news-data"
+      // ,{ signal: abortC1.signal }
     );
     const popularData = await popular.json();
 
     const highlight = await fetch(
-      "https://www.uniquefm.com.np/api/get-sidebar1-today-highlight-data",
-      { signal: abortC2.signal }
+      "https://www.uniquefm.com.np/api/get-sidebar1-today-highlight-data"
+      // ,{ signal: abortC2.signal }
     );
     const highlightData = await highlight.json();
 
     const special = await fetch(
-      "https://www.uniquefm.com.np/api/get-sidebar1-special-program-data",
-      { signal: abortC3.signal }
+      "https://www.uniquefm.com.np/api/get-sidebar1-special-program-data"
+      // ,{ signal: abortC3.signal }
     );
     const specialData = await special.json();
 
     const latestPodcast = await fetch(
-      "https://www.uniquefm.com.np/api/get-sidebar1-latest-podcast-data",
-      { signal: abortC4.signal }
+      "https://www.uniquefm.com.np/api/get-sidebar1-latest-podcast-data"
+      // ,{ signal: abortC4.signal }
     );
     const latestPodcastData = await latestPodcast.json();
 
     const rj = await fetch(
-      "https://www.uniquefm.com.np/api/get-sidebar1-radio-presenter-data",
-      { signal: abortC5.signal }
+      "https://www.uniquefm.com.np/api/get-sidebar1-radio-presenter-data"
+      // ,{ signal: abortC5.signal }
     );
     const rjData = await rj.json();
 

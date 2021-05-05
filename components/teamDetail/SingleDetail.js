@@ -24,7 +24,7 @@ const SingleDetail = ({ content }) => {
               {content.myPrograms.map((p) => (
                 <li>
                   <div key={p.id}>
-                    <Link href={`/programDetail/${id}`}>
+                    <Link href={`/programDetail/${p.id}`}>
                       <a title={p.name}>{p.name}</a>
                     </Link>
                   </div>

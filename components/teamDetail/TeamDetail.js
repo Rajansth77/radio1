@@ -25,7 +25,7 @@ const TeamDetail = ({ content }) => {
         </aside>
 
         <div className="right-side col-sm-4 col-md-3">
-          <div className="items samachar-box todays">
+          {/* <div className="items samachar-box todays">
             <TodaysHighlights />
           </div>
 
@@ -35,7 +35,7 @@ const TeamDetail = ({ content }) => {
 
           <div className="items samachar-box">
             <LatestPodcast />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

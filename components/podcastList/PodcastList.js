@@ -25,7 +25,7 @@ const PodcastList = () => {
         </aside>
 
         <div className="right-side innerpages col-sm-4 col-md-3">
-          <div className="items samachar-box">
+          {/* <div className="items samachar-box">
             <SpecialPrograms />
           </div>
           <div className="items adbox">
@@ -34,7 +34,7 @@ const PodcastList = () => {
 
           <div className="items samachar-box">
             <LatestPodcast />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

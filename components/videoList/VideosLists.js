@@ -55,7 +55,7 @@ const VideosLists = () => {
           </Link>
         </div>
 
-        <Pagination />
+        {/* <Pagination /> */}
       </div>
     </div>
   );

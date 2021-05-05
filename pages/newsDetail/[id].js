@@ -54,7 +54,7 @@ const DetailNews = ({ SingleNews }) => {
         )}
       </Head>
 
-      <NewsDetail content={SingleNews} />
+      <NewsDetail content={SingleNews && SingleNews} />
     </>
   );
 };

@@ -20,7 +20,7 @@ const VideoList = () => {
         </aside>
 
         <div className="right-side col-sm-4 col-md-3">
-          <div className="items samachar-box">
+          {/* <div className="items samachar-box">
             <PopularNews />
           </div>
           <div className="items adbox">
@@ -57,7 +57,7 @@ const VideoList = () => {
 
           <div className="items samachar-box">
             <MostRead />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

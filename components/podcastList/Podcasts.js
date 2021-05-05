@@ -80,7 +80,7 @@ const Podcasts = () => {
           </a>
         </Link>
       </div>
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   );
 };
