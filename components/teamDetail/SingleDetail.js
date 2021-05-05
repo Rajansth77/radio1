@@ -21,45 +21,44 @@ const SingleDetail = ({ content }) => {
           <div className="items shows">
             <span className="main-title">My Shows</span>
             <ul className="my-shows">
-              {content.myPrograms.map((p) => (
-                <li>
-                  <div key={p.id}>
-                    <Link href={`/programDetail/${p.id}`}>
-                      <a title={p.name}>{p.name}</a>
-                    </Link>
-                  </div>
-                </li>
-              ))}
+              {content &&
+                content.myPrograms.map((p) => (
+                  <li>
+                    <div key={p.id}>
+                      <Link href={`/programDetail/${p.id}`}>
+                        <a title={p.name}>{p.name}</a>
+                      </Link>
+                    </div>
+                  </li>
+                ))}
             </ul>
           </div>
 
-          <div className="items social">
+          {/* <div className="items social">
             <span className="main-title">Get Connected</span>
             <TeamSocial
-              url={content.teamInfo.facebook}
+              url={content && content ? content.teamInfo.facebook : ("#")}
               label="Facebook"
               className="fa fa-facebook"
             />
             <TeamSocial
-              url={content.teamInfo.facebook}
+              url={content && content ? content.teamInfo.twitter : ("#")}
               label="Twitter"
               className="fa fa-twitter"
             />
             <TeamSocial
-              url={content.teamInfo.facebook}
+              url={content && content ? content.teamInfo.google_plus : ("#")}
               label="Google_Plus"
               className="fa fa-google-plus"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="col-md-9 samachar-box team-details">
           <span className="cat-box">
             <span className="cat-tags">{content.teamInfo.name}'s Profile</span>
           </span>
-          <div className="editor-box">
-            {content.teamInfo.content}
-          </div>
+          <div className="editor-box">{content.teamInfo.content}</div>
 
           <div className="comment-box">
             <span className="comment-title main-title">
@@ -76,7 +75,7 @@ const SingleDetail = ({ content }) => {
 
 export default SingleDetail;
 
-const TeamSocial = ({ url = "", label = "", className = "" }) => {
+const TeamSocial = ({ url = "#", label = "", className = "" }) => {
   return (
     <Link href={url}>
       <a title={label} target="_blank">
