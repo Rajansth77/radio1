@@ -4,7 +4,7 @@ import SpecialPrograms from "components/homepage/specialPrograms";
 import TodaysHighlights from "components/homepage/todaysHighlights";
 
 const Sidebar1 = () => {
-  const { data: today } = useFetch(
+  const { data: today, isPending, error } = useFetch(
     "https://www.uniquefm.com.np/api/get-sidebar1-today-highlight-data"
   );
   const { data: special } = useFetch(
