@@ -1,4 +1,5 @@
 import Ad280 from "components/common/ads/ad-280x480";
+import Sidebar from "components/common/sidebar/Sidebar";
 import Link from "next/link";
 import React from "react";
 import BicharList from "./BicharList";
@@ -451,36 +452,7 @@ const BlogDetail = ({
         </aside>
 
         <div className="right-side innerpages col-sm-4 col-md-3">
-          <div className="items adbox for-mobile">
-            <Ad280 />
-          </div>
-          <div className="items bichar bichar-mobile">
-            <BicharList />
-          </div>
-          <div className="items bichar bichar-mobile">
-            {/* @include ('frontend.partials.blog')*/}
-          </div>
-          <div className="items bichar bichar-mobile">
-            <SahityaPati />
-          </div>
-          <div className="items adbox">
-            <Ad280 />
-          </div>
-          <div className="items bichar">
-            {/* @include ('frontend.partials.pathak-bichar') */}
-          </div>
-          <div className="items adbox">
-            <Ad280 />
-          </div>
-          <div className="items adbox">
-            <Ad280 />
-          </div>
-          <div className="items adbox">
-            <Ad280 />
-          </div>
-          <div className="items suchanapati">
-            {/* @include ('frontend.partials.suchanapati') */}
-          </div>
+          <Sidebar />
         </div>
       </div>
     </div>

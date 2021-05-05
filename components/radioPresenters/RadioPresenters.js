@@ -1,3 +1,4 @@
+import Sidebar1 from "components/common/sidebar/Sidebar1";
 import CountDown from "components/homepage/countDown";
 import LatestPodcast from "components/homepage/latestPodcast";
 import SpecialPrograms from "components/homepage/specialPrograms";
@@ -43,21 +44,7 @@ const RadioPresenters = () => {
           </section>
 
           <div className="row right-side horizontal-layout team-right">
-            <div className="items col-md-3 samachar-box">
-              <LatestPodcast />
-            </div>
-
-            <div className="items col-md-3 samachar-box todays">
-              <TodaysHighlights />
-            </div>
-
-            <div className="items col-md-3 samachar-box countdown">
-              <CountDown />
-            </div>
-
-            <div className="items col-md-3 samachar-box">
-              <SpecialPrograms />
-            </div>
+            <Sidebar1 />
           </div>
         </aside>
       </div>

@@ -1,3 +1,4 @@
+import Sidebar1 from "components/common/sidebar/Sidebar1";
 import LatestPodcast from "components/homepage/latestPodcast";
 import SpecialPrograms from "components/homepage/specialPrograms";
 import TodaysHighlights from "components/homepage/todaysHighlights";
@@ -25,17 +26,7 @@ const TeamDetail = ({ content }) => {
         </aside>
 
         <div className="right-side col-sm-4 col-md-3">
-          {/* <div className="items samachar-box todays">
-            <TodaysHighlights />
-          </div>
-
-          <div className="items samachar-box">
-            <SpecialPrograms />
-          </div>
-
-          <div className="items samachar-box">
-            <LatestPodcast />
-          </div> */}
+          <Sidebar1 />
         </div>
       </div>
     </div>

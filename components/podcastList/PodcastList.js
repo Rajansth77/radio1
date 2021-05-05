@@ -1,4 +1,5 @@
 import Ad280 from "components/common/ads/ad-280x480";
+import Sidebar1 from "components/common/sidebar/Sidebar1";
 import LatestPodcast from "components/homepage/latestPodcast";
 import SpecialPrograms from "components/homepage/specialPrograms";
 import React from "react";
@@ -25,16 +26,7 @@ const PodcastList = () => {
         </aside>
 
         <div className="right-side innerpages col-sm-4 col-md-3">
-          {/* <div className="items samachar-box">
-            <SpecialPrograms />
-          </div>
-          <div className="items adbox">
-            <Ad280 />
-          </div>
-
-          <div className="items samachar-box">
-            <LatestPodcast />
-          </div> */}
+          <Sidebar1 />
         </div>
       </div>
     </div>
