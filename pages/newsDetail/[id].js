@@ -3,10 +3,10 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import useFetch from "api/useFetch";
-import AbortController from "abort-controller"
+// import AbortController from "abort-controller"
 
-const abortC = new AbortController();
-const abortC1 = new AbortController();
+// const abortC = new AbortController();
+// const abortC1 = new AbortController();
 
 const DetailNews = ({ SingleNews }) => {
   const router = useRouter();
@@ -61,8 +61,8 @@ const DetailNews = ({ SingleNews }) => {
 
 export const getStaticPaths = async () => {
   const NewsRes = await fetch(
-    "https://www.uniquefm.com.np/api/get-news-detail/39",
-    { signal: abortC.signal }
+    "https://www.uniquefm.com.np/api/get-news-detail/39"
+    // ,{ signal: abortC.signal }
   );
   const dataNews = await NewsRes.json();
 
@@ -81,8 +81,8 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
   try {
     const SingleNews = await fetch(
-      `https://www.uniquefm.com.np/api/get-news-detail/${id}`,
-      { signal: abortC1.signal }
+      `https://www.uniquefm.com.np/api/get-news-detail/${id}`
+      // ,{ signal: abortC1.signal }
     );
     const NewsData = await SingleNews.json();
 

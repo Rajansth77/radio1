@@ -2,9 +2,9 @@ import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
 import $ from "jquery";
-import AbortController from "abort-controller"
+// import AbortController from "abort-controller"
 
-const abortC = new AbortController();
+// const abortC = new AbortController();
 
 const LivePlayer = ({ title = "Live Radio" }) => {
   const [radio, setRadio] = useState([]);
@@ -66,10 +66,8 @@ const LivePlayer = ({ title = "Live Radio" }) => {
     const asyncFetchLive = async () => {
       setBusy(true);
       const liveRadio = await fetch(
-        "https://www.uniquefm.com.np/api/get-live-data",
-        {
-          signal: abortC.signal,
-        }
+        "https://www.uniquefm.com.np/api/get-live-data"
+        // ,{signal: abortC.signal,}
       );
       const radioData = await liveRadio.json();
       setBusy(false);

@@ -5,7 +5,7 @@ import Link from "next/link";
 import NavDate from "./date";
 import Logo from "../../../public/images/logo.png";
 import { useEffect, useState } from "react";
-import AbortController from "abort-controller"
+// import AbortController from "abort-controller"
 
 const Header = () => {
   const [ads, setAds] = useState(null);
@@ -13,11 +13,11 @@ const Header = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const abortCont = new AbortController();
+    // const abortCont = new AbortController();
 
-    fetch("https://www.uniquefm.com.np/api/get-ad-and-top-nav-data", {
-      signal: abortCont.signal,
-    })
+    fetch("https://www.uniquefm.com.np/api/get-ad-and-top-nav-data"
+    // , {signal: abortCont.signal,}
+    )
       .then((res) => {
         if (!res.ok) {
           throw Error("Could not fetch the data for that resource");
@@ -36,9 +36,9 @@ const Header = () => {
           setIsPending(false);
           setError(err.message);
         }
-      });
+      })
 
-    return () => abortCont.abort();
+    // return () => abortCont.abort();
   }, []);
 
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Clock from "react-live-clock";
-import AbortController from "abort-controller"
+// import AbortController from "abort-controller"
 
-const abortC = new AbortController();
+// const abortC = new AbortController();
 
 const NavDate = () => {
   const [Cdate, setDate] = useState([]);
@@ -10,8 +10,9 @@ const NavDate = () => {
   useEffect(() => {
     const asyncFetchDate = async () => {
       const dateItem = await fetch(
-        "https://www.uniquefm.com.np/api/get-ad-and-top-nav-data",
-        { signal: abortC.signal }
+        "https://www.uniquefm.com.np/api/get-ad-and-top-nav-data"
+        // ,
+        // { signal: abortC.signal }
       );
       const dateData = await dateItem.json();
       const CurrentDate = dateData.nepaliDate;

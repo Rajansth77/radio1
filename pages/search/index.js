@@ -2,9 +2,9 @@ import React from "react";
 import { useRouter } from "next/router";
 import LatestNews from "components/newsList/LatestNews";
 import Sidebar from "components/common/sidebar/Sidebar";
-import AbortController from "abort-controller"
+// import AbortController from "abort-controller"
 
-const abortC = new AbortController();
+// const abortC = new AbortController();
 
 const SearchList = ({ SearchItem, title }) => {
   const router = useRouter();
@@ -30,8 +30,8 @@ const SearchList = ({ SearchItem, title }) => {
 export const getStaticProps = async (context) => {
   try {
     const SingleNews = await fetch(
-      `https://www.uniquefm.com.np/api/get-search-list`,
-      { signal: abortC.signal }
+      `https://www.uniquefm.com.np/api/get-search-list`
+      // ,{ signal: abortC.signal }
     );
     const NewsListData = await SingleNews.json();
 
